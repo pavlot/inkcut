@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Jul 25, 2015
+
+@author: jrm
+"""
+import enaml
+from enaml.workbench.api import Extension
+from enaml.workbench.plugin_manifest import PluginManifest
+from inkcut.device.extensions import DeviceTransport, DEVICE_TRANSPORT_POINT
+
+def transport_factory(driver, declaration, protocol):
+    from .plugin import UsbPortTransport, UsbPortConfig
+    config = UsbPortConfig(**driver.get_connection_config('serial'))
+    return UsbPortTransport(declaration=declaration, protocol=protocol, config=config)
+
+
+def config_view_factory():
+    with enaml.imports():
+        from .settings import UsbPortPortSettingsView
+    return UsbPortPortSettingsView
+
+
+def plugin_factory():
+    from .plugin import UsbPortPlugin
+    return UsbPortPlugin()
+
+
+enamldef UsbPortManifest(PluginManifest):
+    """ Add new protocols here or within any other plugin.
+    
+    All protocols should implement the IDeviceProtocol and then
+    register as an extension to the point 'inkcut.device.protocols'
+    
+    """
+    id = 'inkcut.device.transport.usbportport'
+    factory = plugin_factory
+    Extension:
+        id = 'transports'
+        point = DEVICE_TRANSPORT_POINT
+
+        DeviceTransport:
+            id = 'usbport'
+            name = 'Usb Port'
+            factory = transport_factory
+            config_view = config_view_factory
+            
+
+        
