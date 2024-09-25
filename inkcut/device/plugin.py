@@ -1072,7 +1072,7 @@ class DevicePlugin(Plugin):
         plugins = []
         with enaml.imports():
             from .transports.raw.manifest import RawFdManifest
-            from .transports.usbport.manifest import UsbPortManifest
+            from .transports.usbdevice.manifest import UsbDeviceManifest
             from .transports.serialport.manifest import SerialManifest
             from .transports.qtserialport.manifest import QtSerialManifest
             from .transports.printer.manifest import PrinterManifest
@@ -1082,8 +1082,9 @@ class DevicePlugin(Plugin):
             from inkcut.device.drivers.manifest import DriversManifest
             from inkcut.device.filters.manifest import FiltersManifest
             from inkcut.device.pi.manifest import PiManifest
+            from inkcut.device.graphtec_ce_50_lite.manifest import GraphtecCe50LiteManifest
             plugins.append(RawFdManifest)
-            plugins.append(UsbPortManifest)
+            plugins.append(UsbDeviceManifest)
             plugins.append(SerialManifest)
             plugins.append(QtSerialManifest)
             plugins.append(PrinterManifest)
@@ -1093,6 +1094,7 @@ class DevicePlugin(Plugin):
             plugins.append(DriversManifest)
             plugins.append(FiltersManifest)
             plugins.append(PiManifest)
+            plugins.append(GraphtecCe50LiteManifest)
 
         for Manifest in plugins:
             w.register(Manifest())

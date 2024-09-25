@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+"""
+Copyright (c) 2017, Jairus Martin.
+
+Distributed under the terms of the GPL v3 License.
+
+The full license is in the file LICENSE, distributed with this software.
+
+Created on Dec 8, 2017
+
+@author: jrm
+"""
+from enaml.core.api import Looper
+from enaml.layout.api import hbox
+from enaml.widgets.api import (
+    Container, Form, Label, ObjectCombo, SpinBox, CheckBox, Notebook, Page
+)
+from enamlx.widgets.api import DoubleSpinBox
+from .driver import PiConfig # TODO PTAR Remove it
+from .driver import ConditionConfig
+from enaml.qt.QtWidgets import QApplication
+
+
+
+enamldef ConditionForm(Form):
+    attr model: ConditionConfig
+    Label:
+        text = QApplication.translate("pi", "Tool")
+
+
+enamldef ConfigView(Container): view:
+    """ Config editor for the PiDevice when the
+    user selects it. The device.config Model is
+    passed in here so it can be modified.
+    """
+    attr model: PiConfig
+    padding = 0
+    Notebook:
+        tab_style = 'document'
+        tab_position = 'left'
+        constraints = [
+            hbox(nb_conditions),
+        ]        
+        Page:
+            closable = False
+            title = QApplication.translate("pi", "Conditions")
+            Container:
+                Notebook: nb_conditions:
+                    tab_style = 'document'
+                    tab_position = 'top'
+                    Looper: looper:
+                        iterable << range(1,9)
+                        Page:
+                            closable = False
+                            title = QApplication.translate("pi", "Condition {}".format(loop.item))
+                            Form:
+                                ConditionForm:
+                                    pass
