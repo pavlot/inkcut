@@ -1,15 +1,15 @@
 import pytest
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterTool
 
 
-class TestTool:
+class TestPlotterParameterTool:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
+        parameter = PlotterParameterTool()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -18,7 +18,7 @@ class TestTool:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
+        parameter = PlotterParameterTool()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -28,15 +28,15 @@ class TestTool:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterOffset
 
 
-class TestOffset:
+class TestPlotterParameterOffset:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
+        parameter = PlotterParameterOffset()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -45,7 +45,7 @@ class TestOffset:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
+        parameter = PlotterParameterOffset()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -55,15 +55,15 @@ class TestOffset:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterSpeed
 
 
-class TestSpeed:
+class TestPlotterParameterSpeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterSpeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -72,7 +72,7 @@ class TestSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterSpeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -82,15 +82,15 @@ class TestSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterForce
 
 
-class TestForce:
+class TestPlotterParameterForce:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("11", "11")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
+        parameter = PlotterParameterForce()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -99,7 +99,7 @@ class TestForce:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("11", "11")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
+        parameter = PlotterParameterForce()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -109,15 +109,15 @@ class TestForce:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterAccel
 
 
-class TestAccel:
+class TestPlotterParameterAccel:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
+        parameter = PlotterParameterAccel()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -126,7 +126,7 @@ class TestAccel:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
+        parameter = PlotterParameterAccel()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -136,15 +136,15 @@ class TestAccel:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterInitialDownForce
 
 
-class TestInitialDownForce:
+class TestPlotterParameterInitialDownForce:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
+        parameter = PlotterParameterInitialDownForce()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -153,7 +153,7 @@ class TestInitialDownForce:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
+        parameter = PlotterParameterInitialDownForce()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -163,15 +163,15 @@ class TestInitialDownForce:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCutLinePattern
 
 
-class TestCutLinePattern:
+class TestPlotterParameterCutLinePattern:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
+        parameter = PlotterParameterCutLinePattern()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -180,7 +180,7 @@ class TestCutLinePattern:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
+        parameter = PlotterParameterCutLinePattern()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -190,15 +190,15 @@ class TestCutLinePattern:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterLtypeUp
 
 
-class TestLtypeUp:
+class TestPlotterParameterLtypeUp:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
+        parameter = PlotterParameterLtypeUp()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -207,7 +207,7 @@ class TestLtypeUp:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
+        parameter = PlotterParameterLtypeUp()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -217,15 +217,15 @@ class TestLtypeUp:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterLtypeDwn
 
 
-class TestLtypeDwn:
+class TestPlotterParameterLtypeDwn:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
+        parameter = PlotterParameterLtypeDwn()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -234,7 +234,7 @@ class TestLtypeDwn:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
+        parameter = PlotterParameterLtypeDwn()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -244,15 +244,15 @@ class TestLtypeDwn:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterUpMode
 
 
-class TestUpMode:
+class TestPlotterParameterUpMode:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
+        parameter = PlotterParameterUpMode()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -261,7 +261,7 @@ class TestUpMode:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
+        parameter = PlotterParameterUpMode()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -271,15 +271,15 @@ class TestUpMode:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterTangentialMode
 
 
-class TestTangentialMode:
+class TestPlotterParameterTangentialMode:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
+        parameter = PlotterParameterTangentialMode()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -288,7 +288,7 @@ class TestTangentialMode:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
+        parameter = PlotterParameterTangentialMode()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -298,15 +298,15 @@ class TestTangentialMode:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterOvercutSE
 
 
-class TestOvercutSE:
+class TestPlotterParameterOvercutSE:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
+        parameter = PlotterParameterOvercutSE()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -315,7 +315,7 @@ class TestOvercutSE:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
+        parameter = PlotterParameterOvercutSE()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -325,15 +325,15 @@ class TestOvercutSE:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterDAdj
 
 
-class TestDAdj:
+class TestPlotterParameterDAdj:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
+        parameter = PlotterParameterDAdj()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -342,7 +342,7 @@ class TestDAdj:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
+        parameter = PlotterParameterDAdj()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -352,15 +352,15 @@ class TestDAdj:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterX
 
 
-class TestX:
+class TestPlotterParameterX:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
+        parameter = PlotterParameterX()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -369,7 +369,7 @@ class TestX:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
+        parameter = PlotterParameterX()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -379,15 +379,15 @@ class TestX:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterY
 
 
-class TestY:
+class TestPlotterParameterY:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
+        parameter = PlotterParameterY()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -396,7 +396,7 @@ class TestY:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
+        parameter = PlotterParameterY()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -406,24 +406,24 @@ class TestY:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterStepPass
 
 
-class TestTool:
+class TestPlotterParameterStepPass:
 
     # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PEN", "PEN")])
+    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
+        parameter = PlotterParameterStepPass()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
     # ------------------------------------------------------------------------------------------------
 
     # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PEN", "PEN")])
+    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
+        parameter = PlotterParameterStepPass()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -433,42 +433,15 @@ class TestTool:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterOffsetForce
 
 
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
+class TestPlotterParameterOffsetForce:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterOffsetForce()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -477,7 +450,7 @@ class TestSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterOffsetForce()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -487,393 +460,15 @@ class TestSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterOffsetAngle
 
 
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("12", "12")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("12", "12")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
+class TestPlotterParameterOffsetAngle:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("30", "30")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterOffsetAngle()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -882,7 +477,7 @@ class TestSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("30", "30")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
+        parameter = PlotterParameterOffsetAngle()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -892,96 +487,15 @@ class TestSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterDataSort
 
 
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("12", "12")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("12", "12")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
+class TestPlotterParameterDataSort:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
+        parameter = PlotterParameterDataSort()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -990,7 +504,7 @@ class TestCutLinePattern:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
+        parameter = PlotterParameterDataSort()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -1000,2364 +514,15 @@ class TestCutLinePattern:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterToolUpSpeed
 
 
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("20", "20")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("20", "20")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
-
-
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
-
-
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("3", "3")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("3", "3")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
-
-
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("20", "20")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("20", "20")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("25", "25")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("25", "25")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
-
-
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("17", "17")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Tool
-
-
-class TestTool:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("PM-BS-001", "PM-BS-001")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Tool()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Offset
-
-
-class TestOffset:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Offset()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Speed
-
-
-class TestSpeed:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("5", "5")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("5", "5")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Speed()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Force
-
-
-class TestForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("26", "26")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("26", "26")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Force()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Accel
-
-
-class TestAccel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Accel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialDownForce
-
-
-class TestInitialDownForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("15", "15")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialDownForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CutLinePattern
-
-
-class TestCutLinePattern:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = CutLinePattern()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeUp
-
-
-class TestLtypeUp:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.6mm", "0.6mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeUp()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LtypeDwn
-
-
-class TestLtypeDwn:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("8.0mm", "8.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = LtypeDwn()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UpMode
-
-
-class TestUpMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("UP", "UP")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UpMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import TangentialMode
-
-
-class TestTangentialMode:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = TangentialMode()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OvercutSE
-
-
-class TestOvercutSE:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OvercutSE()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdj
-
-
-class TestDAdj:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdj()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import X
-
-
-class TestX:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = X()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Y
-
-
-class TestY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0.00", "0.00")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = Y()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import StepPass
-
-
-class TestStepPass:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = StepPass()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = StepPass()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OffsetForce
-
-
-class TestOffsetForce:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OffsetForce()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("10", "10")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OffsetForce()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import OffsetAngle
-
-
-class TestOffsetAngle:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("30", "30")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = OffsetAngle()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("30", "30")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = OffsetAngle()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DataSort
-
-
-class TestDataSort:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = DataSort()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = DataSort()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import ToolUpSpeed
-
-
-class TestToolUpSpeed:
+class TestPlotterParameterToolUpSpeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("AUTO", "AUTO")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = ToolUpSpeed()
+        parameter = PlotterParameterToolUpSpeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3366,7 +531,7 @@ class TestToolUpSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("AUTO", "AUTO")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = ToolUpSpeed()
+        parameter = PlotterParameterToolUpSpeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3376,15 +541,15 @@ class TestToolUpSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import ConditionPriority
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterConditionPriority
 
 
-class TestConditionPriority:
+class TestPlotterParameterConditionPriority:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("PROGRAM", "PROGRAM")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = ConditionPriority()
+        parameter = PlotterParameterConditionPriority()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3393,7 +558,7 @@ class TestConditionPriority:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("PROGRAM", "PROGRAM")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = ConditionPriority()
+        parameter = PlotterParameterConditionPriority()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3403,15 +568,15 @@ class TestConditionPriority:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialBlade
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterInitialBlade
 
 
-class TestInitialBlade:
+class TestPlotterParameterInitialBlade:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2mm BELOW", "2mm BELOW")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialBlade()
+        parameter = PlotterParameterInitialBlade()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3420,7 +585,7 @@ class TestInitialBlade:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2mm BELOW", "2mm BELOW")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialBlade()
+        parameter = PlotterParameterInitialBlade()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3430,15 +595,15 @@ class TestInitialBlade:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import ToolUpMove
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterToolUpMove
 
 
-class TestToolUpMove:
+class TestPlotterParameterToolUpMove:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = ToolUpMove()
+        parameter = PlotterParameterToolUpMove()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3447,7 +612,7 @@ class TestToolUpMove:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = ToolUpMove()
+        parameter = PlotterParameterToolUpMove()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3457,15 +622,15 @@ class TestToolUpMove:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkScanMode
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkScanMode
 
 
-class TestMarkScanMode:
+class TestPlotterParameterMarkScanMode:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkScanMode()
+        parameter = PlotterParameterMarkScanMode()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3474,7 +639,7 @@ class TestMarkScanMode:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkScanMode()
+        parameter = PlotterParameterMarkScanMode()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3484,15 +649,15 @@ class TestMarkScanMode:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import NumberOfPoints
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterNumberOfPoints
 
 
-class TestNumberOfPoints:
+class TestPlotterParameterNumberOfPoints:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2POINTS", "2POINTS")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = NumberOfPoints()
+        parameter = PlotterParameterNumberOfPoints()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3501,7 +666,7 @@ class TestNumberOfPoints:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2POINTS", "2POINTS")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = NumberOfPoints()
+        parameter = PlotterParameterNumberOfPoints()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3511,15 +676,15 @@ class TestNumberOfPoints:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkDistanceXY
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkDistanceXY
 
 
-class TestMarkDistanceXY:
+class TestPlotterParameterMarkDistanceXY:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,   0.0mm", "0.0mm,   0.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkDistanceXY()
+        parameter = PlotterParameterMarkDistanceXY()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3528,7 +693,7 @@ class TestMarkDistanceXY:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,   0.0mm", "0.0mm,   0.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkDistanceXY()
+        parameter = PlotterParameterMarkDistanceXY()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3538,15 +703,15 @@ class TestMarkDistanceXY:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import SensingSpeed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterSensingSpeed
 
 
-class TestSensingSpeed:
+class TestPlotterParameterSensingSpeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NORMAL", "NORMAL")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = SensingSpeed()
+        parameter = PlotterParameterSensingSpeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3555,7 +720,7 @@ class TestSensingSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NORMAL", "NORMAL")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = SensingSpeed()
+        parameter = PlotterParameterSensingSpeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3565,15 +730,15 @@ class TestSensingSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkType
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkType
 
 
-class TestMarkType:
+class TestPlotterParameterMarkType:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkType()
+        parameter = PlotterParameterMarkType()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3582,7 +747,7 @@ class TestMarkType:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("2", "2")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkType()
+        parameter = PlotterParameterMarkType()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3592,15 +757,15 @@ class TestMarkType:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DAdjMode
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterDAdjMode
 
 
-class TestDAdjMode:
+class TestPlotterParameterDAdjMode:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("USER", "USER")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = DAdjMode()
+        parameter = PlotterParameterDAdjMode()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3609,7 +774,7 @@ class TestDAdjMode:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("USER", "USER")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = DAdjMode()
+        parameter = PlotterParameterDAdjMode()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3619,15 +784,15 @@ class TestDAdjMode:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkDistAdjUnit
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkDistAdjUnit
 
 
-class TestMarkDistAdjUnit:
+class TestPlotterParameterMarkDistAdjUnit:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("5mm", "5mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkDistAdjUnit()
+        parameter = PlotterParameterMarkDistAdjUnit()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3636,7 +801,7 @@ class TestMarkDistAdjUnit:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("5mm", "5mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkDistAdjUnit()
+        parameter = PlotterParameterMarkDistAdjUnit()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3646,15 +811,15 @@ class TestMarkDistAdjUnit:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkOffsetXY
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkOffsetXY
 
 
-class TestMarkOffsetXY:
+class TestPlotterParameterMarkOffsetXY:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,  0.0mm", "0.0mm,  0.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkOffsetXY()
+        parameter = PlotterParameterMarkOffsetXY()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3663,7 +828,7 @@ class TestMarkOffsetXY:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,  0.0mm", "0.0mm,  0.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkOffsetXY()
+        parameter = PlotterParameterMarkOffsetXY()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3673,15 +838,15 @@ class TestMarkOffsetXY:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkAutoScan
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkAutoScan
 
 
-class TestMarkAutoScan:
+class TestPlotterParameterMarkAutoScan:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ON", "ON")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkAutoScan()
+        parameter = PlotterParameterMarkAutoScan()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3690,7 +855,7 @@ class TestMarkAutoScan:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ON", "ON")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkAutoScan()
+        parameter = PlotterParameterMarkAutoScan()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3700,15 +865,15 @@ class TestMarkAutoScan:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PaperWeight
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterPaperWeight
 
 
-class TestPaperWeight:
+class TestPlotterParameterPaperWeight:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ON", "ON")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = PaperWeight()
+        parameter = PlotterParameterPaperWeight()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3717,7 +882,7 @@ class TestPaperWeight:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ON", "ON")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = PaperWeight()
+        parameter = PlotterParameterPaperWeight()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3727,15 +892,15 @@ class TestPaperWeight:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import SensorOffsetAdj
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterSensorOffsetAdj
 
 
-class TestSensorOffsetAdj:
+class TestPlotterParameterSensorOffsetAdj:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = SensorOffsetAdj()
+        parameter = PlotterParameterSensorOffsetAdj()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3744,7 +909,7 @@ class TestSensorOffsetAdj:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.0mm,0.0mm", "0.0mm,0.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = SensorOffsetAdj()
+        parameter = PlotterParameterSensorOffsetAdj()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3754,15 +919,15 @@ class TestSensorOffsetAdj:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MarkSize
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMarkSize
 
 
-class TestMarkSize:
+class TestPlotterParameterMarkSize:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("20.0", "20.0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MarkSize()
+        parameter = PlotterParameterMarkSize()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3771,7 +936,7 @@ class TestMarkSize:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("20.0", "20.0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MarkSize()
+        parameter = PlotterParameterMarkSize()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3781,15 +946,15 @@ class TestMarkSize:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import SensorAdjust
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterSensorAdjust
 
 
-class TestSensorAdjust:
+class TestPlotterParameterSensorAdjust:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = SensorAdjust()
+        parameter = PlotterParameterSensorAdjust()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3798,7 +963,7 @@ class TestSensorAdjust:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = SensorAdjust()
+        parameter = PlotterParameterSensorAdjust()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3808,15 +973,15 @@ class TestSensorAdjust:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import SensingLevelXY
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterSensingLevelXY
 
 
-class TestSensingLevelXY:
+class TestPlotterParameterSensingLevelXY:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("70,80", "70,80")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = SensingLevelXY()
+        parameter = PlotterParameterSensingLevelXY()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3825,7 +990,7 @@ class TestSensingLevelXY:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("70,80", "70,80")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = SensingLevelXY()
+        parameter = PlotterParameterSensingLevelXY()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3835,15 +1000,15 @@ class TestSensingLevelXY:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import FactorySensorGain
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterFactorySensorGain
 
 
-class TestFactorySensorGain:
+class TestPlotterParameterFactorySensorGain:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = FactorySensorGain()
+        parameter = PlotterParameterFactorySensorGain()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3852,7 +1017,7 @@ class TestFactorySensorGain:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = FactorySensorGain()
+        parameter = PlotterParameterFactorySensorGain()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3862,15 +1027,15 @@ class TestFactorySensorGain:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import FactoryBaseLevel
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterFactoryBaseLevel
 
 
-class TestFactoryBaseLevel:
+class TestPlotterParameterFactoryBaseLevel:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = FactoryBaseLevel()
+        parameter = PlotterParameterFactoryBaseLevel()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3879,7 +1044,7 @@ class TestFactoryBaseLevel:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = FactoryBaseLevel()
+        parameter = PlotterParameterFactoryBaseLevel()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3889,96 +1054,17 @@ class TestFactoryBaseLevel:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import FactorySensingLevelXY
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import (
+    PlotterParameterFactorySensingLevelXY,
+)
 
 
-class TestFactorySensingLevelXY:
+class TestPlotterParameterFactorySensingLevelXY:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = FactorySensingLevelXY()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = FactorySensingLevelXY()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UserSensorGain
-
-
-class TestUserSensorGain:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UserSensorGain()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UserSensorGain()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UserBaseLevel
-
-
-class TestUserBaseLevel:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UserBaseLevel()
-        parameter.set_value(input_value)
-        assert parameter.get_value() == expected_value
-
-    # ------------------------------------------------------------------------------------------------
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
-    def test_get_update_command(self, input_value, expected_value):
-        parameter = UserBaseLevel()
-        parameter.set_value(input_value)
-        if parameter.is_readonly():
-            assert parameter.get_update_command() == ""
-            return
-
-        assert parameter.get_update_command() == expected_value
-
-
-# ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import UserSensingLevelXY
-
-
-class TestUserSensingLevelXY:
-
-    # TODO PTAR Update this method if required with other values
-    @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
-    def test_value_from_string(self, input_value, expected_value):
-        parameter = UserSensingLevelXY()
+        parameter = PlotterParameterFactorySensingLevelXY()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -3987,7 +1073,7 @@ class TestUserSensingLevelXY:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = UserSensingLevelXY()
+        parameter = PlotterParameterFactorySensingLevelXY()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -3997,15 +1083,98 @@ class TestUserSensingLevelXY:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import RmSensorLevelAdjSelect
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterUserSensorGain
 
 
-class TestRmSensorLevelAdjSelect:
+class TestPlotterParameterUserSensorGain:
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
+    def test_value_from_string(self, input_value, expected_value):
+        parameter = PlotterParameterUserSensorGain()
+        parameter.set_value(input_value)
+        assert parameter.get_value() == expected_value
+
+    # ------------------------------------------------------------------------------------------------
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
+    def test_get_update_command(self, input_value, expected_value):
+        parameter = PlotterParameterUserSensorGain()
+        parameter.set_value(input_value)
+        if parameter.is_readonly():
+            assert parameter.get_update_command() == ""
+            return
+
+        assert parameter.get_update_command() == expected_value
+
+
+# ----------------------------------------------------------------------------------------------------
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterUserBaseLevel
+
+
+class TestPlotterParameterUserBaseLevel:
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
+    def test_value_from_string(self, input_value, expected_value):
+        parameter = PlotterParameterUserBaseLevel()
+        parameter.set_value(input_value)
+        assert parameter.get_value() == expected_value
+
+    # ------------------------------------------------------------------------------------------------
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
+    def test_get_update_command(self, input_value, expected_value):
+        parameter = PlotterParameterUserBaseLevel()
+        parameter.set_value(input_value)
+        if parameter.is_readonly():
+            assert parameter.get_update_command() == ""
+            return
+
+        assert parameter.get_update_command() == expected_value
+
+
+# ----------------------------------------------------------------------------------------------------
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterUserSensingLevelXY
+
+
+class TestPlotterParameterUserSensingLevelXY:
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
+    def test_value_from_string(self, input_value, expected_value):
+        parameter = PlotterParameterUserSensingLevelXY()
+        parameter.set_value(input_value)
+        assert parameter.get_value() == expected_value
+
+    # ------------------------------------------------------------------------------------------------
+
+    # TODO PTAR Update this method if required with other values
+    @pytest.mark.parametrize("input_value,expected_value", [("0,0", "0,0")])
+    def test_get_update_command(self, input_value, expected_value):
+        parameter = PlotterParameterUserSensingLevelXY()
+        parameter.set_value(input_value)
+        if parameter.is_readonly():
+            assert parameter.get_update_command() == ""
+            return
+
+        assert parameter.get_update_command() == expected_value
+
+
+# ----------------------------------------------------------------------------------------------------
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import (
+    PlotterParameterRmSensorLevelAdjSelect,
+)
+
+
+class TestPlotterParameterRmSensorLevelAdjSelect:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("USER", "USER")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = RmSensorLevelAdjSelect()
+        parameter = PlotterParameterRmSensorLevelAdjSelect()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4014,7 +1183,7 @@ class TestRmSensorLevelAdjSelect:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("USER", "USER")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = RmSensorLevelAdjSelect()
+        parameter = PlotterParameterRmSensorLevelAdjSelect()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4024,15 +1193,15 @@ class TestRmSensorLevelAdjSelect:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Expand
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterExpand
 
 
-class TestExpand:
+class TestPlotterParameterExpand:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("10.0mm", "10.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Expand()
+        parameter = PlotterParameterExpand()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4041,7 +1210,7 @@ class TestExpand:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("10.0mm", "10.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Expand()
+        parameter = PlotterParameterExpand()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4051,15 +1220,15 @@ class TestExpand:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Rotate
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterRotate
 
 
-class TestRotate:
+class TestPlotterParameterRotate:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Rotate()
+        parameter = PlotterParameterRotate()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4068,7 +1237,7 @@ class TestRotate:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Rotate()
+        parameter = PlotterParameterRotate()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4078,15 +1247,15 @@ class TestRotate:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Mirror
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMirror
 
 
-class TestMirror:
+class TestPlotterParameterMirror:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Mirror()
+        parameter = PlotterParameterMirror()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4095,7 +1264,7 @@ class TestMirror:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Mirror()
+        parameter = PlotterParameterMirror()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4105,15 +1274,15 @@ class TestMirror:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Scale
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterScale
 
 
-class TestScale:
+class TestPlotterParameterScale:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Scale()
+        parameter = PlotterParameterScale()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4122,7 +1291,7 @@ class TestScale:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1", "1")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Scale()
+        parameter = PlotterParameterScale()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4132,15 +1301,15 @@ class TestScale:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import InitialFeed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterInitialFeed
 
 
-class TestInitialFeed:
+class TestPlotterParameterInitialFeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = InitialFeed()
+        parameter = PlotterParameterInitialFeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4149,7 +1318,7 @@ class TestInitialFeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = InitialFeed()
+        parameter = PlotterParameterInitialFeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4159,15 +1328,15 @@ class TestInitialFeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import FeedSpeed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterFeedSpeed
 
 
-class TestFeedSpeed:
+class TestPlotterParameterFeedSpeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NORMAL", "NORMAL")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = FeedSpeed()
+        parameter = PlotterParameterFeedSpeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4176,7 +1345,7 @@ class TestFeedSpeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NORMAL", "NORMAL")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = FeedSpeed()
+        parameter = PlotterParameterFeedSpeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4186,15 +1355,15 @@ class TestFeedSpeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import AutoPreFeed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterAutoPreFeed
 
 
-class TestAutoPreFeed:
+class TestPlotterParameterAutoPreFeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = AutoPreFeed()
+        parameter = PlotterParameterAutoPreFeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4203,7 +1372,7 @@ class TestAutoPreFeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = AutoPreFeed()
+        parameter = PlotterParameterAutoPreFeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4213,15 +1382,15 @@ class TestAutoPreFeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import AutoPreFeedLength
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterAutoPreFeedLength
 
 
-class TestAutoPreFeedLength:
+class TestPlotterParameterAutoPreFeedLength:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("300.0mm", "300.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = AutoPreFeedLength()
+        parameter = PlotterParameterAutoPreFeedLength()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4230,7 +1399,7 @@ class TestAutoPreFeedLength:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("300.0mm", "300.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = AutoPreFeedLength()
+        parameter = PlotterParameterAutoPreFeedLength()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4240,15 +1409,15 @@ class TestAutoPreFeedLength:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PageLength
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterPageLength
 
 
-class TestPageLength:
+class TestPlotterParameterPageLength:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("500.0mm", "500.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = PageLength()
+        parameter = PlotterParameterPageLength()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4257,7 +1426,7 @@ class TestPageLength:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("500.0mm", "500.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = PageLength()
+        parameter = PlotterParameterPageLength()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4267,15 +1436,15 @@ class TestPageLength:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PreFeed
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterPreFeed
 
 
-class TestPreFeed:
+class TestPlotterParameterPreFeed:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("300.0mm", "300.0mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = PreFeed()
+        parameter = PlotterParameterPreFeed()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4284,7 +1453,7 @@ class TestPreFeed:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("300.0mm", "300.0mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = PreFeed()
+        parameter = PlotterParameterPreFeed()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4294,15 +1463,15 @@ class TestPreFeed:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PanelCutting
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterPanelCutting
 
 
-class TestPanelCutting:
+class TestPlotterParameterPanelCutting:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = PanelCutting()
+        parameter = PlotterParameterPanelCutting()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4311,7 +1480,7 @@ class TestPanelCutting:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = PanelCutting()
+        parameter = PlotterParameterPanelCutting()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4321,15 +1490,15 @@ class TestPanelCutting:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DivideLength
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterDivideLength
 
 
-class TestDivideLength:
+class TestPlotterParameterDivideLength:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("100.0cm", "100.0cm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = DivideLength()
+        parameter = PlotterParameterDivideLength()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4338,7 +1507,7 @@ class TestDivideLength:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("100.0cm", "100.0cm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = DivideLength()
+        parameter = PlotterParameterDivideLength()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4348,15 +1517,15 @@ class TestDivideLength:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import BaudRate
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterBaudRate
 
 
-class TestBaudRate:
+class TestPlotterParameterBaudRate:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = BaudRate()
+        parameter = PlotterParameterBaudRate()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4365,7 +1534,7 @@ class TestBaudRate:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0", "0")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = BaudRate()
+        parameter = PlotterParameterBaudRate()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4375,15 +1544,15 @@ class TestBaudRate:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Parity
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterParity
 
 
-class TestParity:
+class TestPlotterParameterParity:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NONE", "NONE")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Parity()
+        parameter = PlotterParameterParity()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4392,7 +1561,7 @@ class TestParity:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("NONE", "NONE")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Parity()
+        parameter = PlotterParameterParity()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4402,15 +1571,15 @@ class TestParity:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import DataBit
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterDataBit
 
 
-class TestDataBit:
+class TestPlotterParameterDataBit:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("8 BIT", "8 BIT")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = DataBit()
+        parameter = PlotterParameterDataBit()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4419,7 +1588,7 @@ class TestDataBit:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("8 BIT", "8 BIT")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = DataBit()
+        parameter = PlotterParameterDataBit()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4429,15 +1598,15 @@ class TestDataBit:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Handshake
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterHandshake
 
 
-class TestHandshake:
+class TestPlotterParameterHandshake:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("HARDWIRE", "HARDWIRE")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Handshake()
+        parameter = PlotterParameterHandshake()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4446,7 +1615,7 @@ class TestHandshake:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("HARDWIRE", "HARDWIRE")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Handshake()
+        parameter = PlotterParameterHandshake()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4456,15 +1625,15 @@ class TestHandshake:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import Command
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCommand
 
 
-class TestCommand:
+class TestPlotterParameterCommand:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("HP-GL", "HP-GL")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = Command()
+        parameter = PlotterParameterCommand()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4473,7 +1642,7 @@ class TestCommand:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("HP-GL", "HP-GL")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = Command()
+        parameter = PlotterParameterCommand()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4483,15 +1652,15 @@ class TestCommand:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import GpGlStepSize
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterGpGlStepSize
 
 
-class TestGpGlStepSize:
+class TestPlotterParameterGpGlStepSize:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.100mm", "0.100mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = GpGlStepSize()
+        parameter = PlotterParameterGpGlStepSize()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4500,7 +1669,7 @@ class TestGpGlStepSize:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.100mm", "0.100mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = GpGlStepSize()
+        parameter = PlotterParameterGpGlStepSize()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4510,15 +1679,15 @@ class TestGpGlStepSize:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import HpGlOrigin
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterHpGlOrigin
 
 
-class TestHpGlOrigin:
+class TestPlotterParameterHpGlOrigin:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("LOWER LEFT", "LOWER LEFT")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = HpGlOrigin()
+        parameter = PlotterParameterHpGlOrigin()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4527,7 +1696,7 @@ class TestHpGlOrigin:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("LOWER LEFT", "LOWER LEFT")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = HpGlOrigin()
+        parameter = PlotterParameterHpGlOrigin()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4537,15 +1706,15 @@ class TestHpGlOrigin:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import HpGlModelEmulated
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterHpGlModelEmulated
 
 
-class TestHpGlModelEmulated:
+class TestPlotterParameterHpGlModelEmulated:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("7586", "7586")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = HpGlModelEmulated()
+        parameter = PlotterParameterHpGlModelEmulated()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4554,7 +1723,7 @@ class TestHpGlModelEmulated:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("7586", "7586")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = HpGlModelEmulated()
+        parameter = PlotterParameterHpGlModelEmulated()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4564,15 +1733,15 @@ class TestHpGlModelEmulated:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CircleResolution
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCircleResolution
 
 
-class TestCircleResolution:
+class TestPlotterParameterCircleResolution:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("DEFAULT", "DEFAULT")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CircleResolution()
+        parameter = PlotterParameterCircleResolution()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4581,7 +1750,7 @@ class TestCircleResolution:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("DEFAULT", "DEFAULT")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CircleResolution()
+        parameter = PlotterParameterCircleResolution()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4591,15 +1760,15 @@ class TestCircleResolution:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CommandColSemiCol
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCommandColSemiCol
 
 
-class TestCommandColSemiCol:
+class TestPlotterParameterCommandColSemiCol:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CommandColSemiCol()
+        parameter = PlotterParameterCommandColSemiCol()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4608,7 +1777,7 @@ class TestCommandColSemiCol:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CommandColSemiCol()
+        parameter = PlotterParameterCommandColSemiCol()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4618,15 +1787,15 @@ class TestCommandColSemiCol:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CommandW
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCommandW
 
 
-class TestCommandW:
+class TestPlotterParameterCommandW:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("TOOL UP", "TOOL UP")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CommandW()
+        parameter = PlotterParameterCommandW()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4635,7 +1804,7 @@ class TestCommandW:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("TOOL UP", "TOOL UP")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CommandW()
+        parameter = PlotterParameterCommandW()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4645,15 +1814,15 @@ class TestCommandW:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MoveStep
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMoveStep
 
 
-class TestMoveStep:
+class TestPlotterParameterMoveStep:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.1mm", "0.1mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MoveStep()
+        parameter = PlotterParameterMoveStep()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4662,7 +1831,7 @@ class TestMoveStep:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("0.1mm", "0.1mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MoveStep()
+        parameter = PlotterParameterMoveStep()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4672,15 +1841,15 @@ class TestMoveStep:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LanguageSelection
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterLanguageSelection
 
 
-class TestLanguageSelection:
+class TestPlotterParameterLanguageSelection:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("English", "English")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = LanguageSelection()
+        parameter = PlotterParameterLanguageSelection()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4689,7 +1858,7 @@ class TestLanguageSelection:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("English", "English")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = LanguageSelection()
+        parameter = PlotterParameterLanguageSelection()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4699,15 +1868,15 @@ class TestLanguageSelection:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import LengthUnit
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterLengthUnit
 
 
-class TestLengthUnit:
+class TestPlotterParameterLengthUnit:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("METRIC", "METRIC")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = LengthUnit()
+        parameter = PlotterParameterLengthUnit()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4716,7 +1885,7 @@ class TestLengthUnit:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("METRIC", "METRIC")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = LengthUnit()
+        parameter = PlotterParameterLengthUnit()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4726,15 +1895,15 @@ class TestLengthUnit:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import MediaSensor
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterMediaSensor
 
 
-class TestMediaSensor:
+class TestPlotterParameterMediaSensor:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = MediaSensor()
+        parameter = PlotterParameterMediaSensor()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4743,7 +1912,7 @@ class TestMediaSensor:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("ENABLED", "ENABLED")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = MediaSensor()
+        parameter = PlotterParameterMediaSensor()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4753,15 +1922,15 @@ class TestMediaSensor:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PushRollerSensor
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterPushRollerSensor
 
 
-class TestPushRollerSensor:
+class TestPlotterParameterPushRollerSensor:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("DISABLED", "DISABLED")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = PushRollerSensor()
+        parameter = PlotterParameterPushRollerSensor()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4770,7 +1939,7 @@ class TestPushRollerSensor:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("DISABLED", "DISABLED")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = PushRollerSensor()
+        parameter = PlotterParameterPushRollerSensor()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4780,15 +1949,15 @@ class TestPushRollerSensor:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import FanPower
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterFanPower
 
 
-class TestFanPower:
+class TestPlotterParameterFanPower:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("WEAK", "WEAK")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = FanPower()
+        parameter = PlotterParameterFanPower()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4797,7 +1966,7 @@ class TestFanPower:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("WEAK", "WEAK")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = FanPower()
+        parameter = PlotterParameterFanPower()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4807,15 +1976,15 @@ class TestFanPower:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import BeepForKeyOpe
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterBeepForKeyOpe
 
 
-class TestBeepForKeyOpe:
+class TestPlotterParameterBeepForKeyOpe:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = BeepForKeyOpe()
+        parameter = PlotterParameterBeepForKeyOpe()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4824,7 +1993,7 @@ class TestBeepForKeyOpe:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("OFF", "OFF")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = BeepForKeyOpe()
+        parameter = PlotterParameterBeepForKeyOpe()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
@@ -4834,15 +2003,15 @@ class TestBeepForKeyOpe:
 
 
 # ----------------------------------------------------------------------------------------------------
-from inkcut.device.graphtec_ce_50_lite.plotter_parameters import CopySpace
+from inkcut.device.graphtec_ce_50_lite.plotter_parameters import PlotterParameterCopySpace
 
 
-class TestCopySpace:
+class TestPlotterParameterCopySpace:
 
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1.00mm", "1.00mm")])
     def test_value_from_string(self, input_value, expected_value):
-        parameter = CopySpace()
+        parameter = PlotterParameterCopySpace()
         parameter.set_value(input_value)
         assert parameter.get_value() == expected_value
 
@@ -4851,7 +2020,7 @@ class TestCopySpace:
     # TODO PTAR Update this method if required with other values
     @pytest.mark.parametrize("input_value,expected_value", [("1.00mm", "1.00mm")])
     def test_get_update_command(self, input_value, expected_value):
-        parameter = CopySpace()
+        parameter = PlotterParameterCopySpace()
         parameter.set_value(input_value)
         if parameter.is_readonly():
             assert parameter.get_update_command() == ""
