@@ -12,7 +12,7 @@ Created on Sep 20, 2024
 """
 import traceback
 from atom.atom import set_default
-from atom.api import List, Instance, Str
+from atom.api import List, Instance, Str, Bool
 from inkcut.core.api import Plugin, Model, log
 from inkcut.device.plugin import DeviceTransport
 from serial.tools.list_ports import comports
@@ -29,6 +29,13 @@ class UsbDeviceDescriptor:
 
     def __str__(self):
         return "{} ({}:{})".format(self.__serial, self.__vendor_id, self.__product_id)
+
+    def matcher(self, dev):
+        return (
+            self.__vendor_id == dev.idVendor
+            and self.__product_id == dev.idProduct
+            and self.__serial == dev.serial_number
+        )
 
 
 class UsbDeviceEnumerator:
@@ -60,7 +67,7 @@ class UsbDeviceEnumerator:
 
 class UsbDeviceConfig(Model):
     device_descriptors = List()
-    
+
     selected_device = Instance(UsbDeviceDescriptor)
 
     def _default_device_descriptors(self):
@@ -70,22 +77,56 @@ class UsbDeviceConfig(Model):
         if self.device_descriptors:
             return self.device_descriptors[0]
         return None
-        
+
     def refresh(self):
         self.device_descriptors = UsbDeviceEnumerator.list()
+
 
 class UsbDeviceTransport(DeviceTransport):
 
     #: Default config
     config = Instance(UsbDeviceConfig, ()).tag(config=True)
 
+    device = Instance(usb.core.Device)
+    ep_in = Instance(usb.core.Endpoint)
+    ep_out = Instance(usb.core.Endpoint)
+
+    reattach_kernel_driver = Bool(False)
+
     def connect(self):
-        """Connect using whatever implementation necessary"""
-        raise NotImplementedError
+        config = self.config
+        log.info("Connecting to USB device {}".format(config.selected_device))
+        devices = list(usb.core.find(find_all=True, custom_match=config.selected_device.matcher))
+        if len(devices) > 0:
+            dev = devices[0]
+            if dev.is_kernel_driver_active(0):
+                dev.detach_kernel_driver(0)
+                self.reattach_kernel_driver = True
+            dev.set_configuration()
+
+            # get an endpoint instance
+            cfg = dev.get_active_configuration()
+
+            intf = cfg[(0, 0)]
+
+            self.ep_out = usb.util.find_descriptor(
+                intf,
+                custom_match=lambda e: usb.util.endpoint_direction(e.bEndpointAddress)
+                == usb.util.ENDPOINT_OUT,
+            )
+            self.ep_in = usb.util.find_descriptor(
+                intf,
+                # match the first OUT endpoint
+                custom_match=lambda e: usb.util.endpoint_direction(e.bEndpointAddress)
+                == usb.util.ENDPOINT_IN,
+            )
+
+            self.device = dev
+            self.connected = True
 
     def write(self, data):
-        """Write using whatever implementation necessary"""
-        raise NotImplementedError
+        log.info("Writing: {}".format(data))
+        self.ep_out.write(data)
 
     def read(self, size=None):
         """Read using whatever implementation necessary and
@@ -95,8 +136,19 @@ class UsbDeviceTransport(DeviceTransport):
         raise NotImplementedError
 
     def disconnect(self):
-        """Disconnect using whatever implementation necessary"""
-        raise NotImplementedError
+        try:
+            log.info("Disconnecting USB device")
+            if self.device:
+                usb.util.dispose_resources(self.device)
+                self.device.reset()
+                if self.reattach_kernel_driver:
+                    self.device.attach_kernel_driver(0)
+                self.device = None
+                self.ep_out = None
+                self.ep_in = None
+                self.connected = False
+        except Exception as e:
+            log.warning("{}.{}".format(e.__class__.__qualname__, e))
 
 
 class UsbDevicePlugin(Plugin):

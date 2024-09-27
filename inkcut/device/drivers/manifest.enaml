@@ -136,6 +136,14 @@ enamldef DriversManifest(PluginManifest):
             protocols = ['hpgl', 'gpgl']
             connections = ['serial']
 
+#        DeviceDriver:
+#            manufacturer = 'Graphtec'
+#            model = 'CE 50 Lite'
+#            width = '130cm'
+#            length = '700cm'
+#            protocols = ['hpgl', 'gpgl']
+#            connections = ['usbdevice']
+
         DeviceDriver:
             manufacturer = 'Silhouette'
             model = 'Cameo 4'

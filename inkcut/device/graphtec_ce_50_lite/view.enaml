@@ -12,13 +12,13 @@ Created on Dec 8, 2017
 """
 from enaml.core.api import Looper
 from inkcut.core.utils import load_icon
+from inkcut.device.plugin import DeviceConfig
 from enaml.layout.api import hbox, align
 from enaml.styling import StyleSheet, Style, Setter
 from enaml.widgets.api import (
     Container, Form, Label, ObjectCombo, SpinBox, CheckBox, Notebook, Page, PushButton
 )
 from enamlx.widgets.api import DoubleSpinBox
-from .driver import PiConfig # TODO PTAR Remove it
 from .driver import ConditionConfig
 from enaml.qt.QtWidgets import QApplication
 
@@ -44,11 +44,11 @@ enamldef ConditionForm(Form):
 
 
 enamldef ConfigView(Container): view:
-    """ Config editor for the PiDevice when the
+    """ Config editor for the Graphtec CE Lite when the
     user selects it. The device.config Model is
     passed in here so it can be modified.
     """
-    attr model: PiConfig
+    attr model : DeviceConfig #: PiConfig # TODO PTAR Restore it
     padding = 0
     ConfigSheet:
         pass

@@ -18,10 +18,10 @@ from inkcut.device.extensions import DeviceDriver
 
 def device_factory(driver, transports, protocols, config=None):
     """ Import our custom device driver """
-    from .driver import PiDevice, PiConfig
+    from .driver import GraphtecCeLite50Device, GraphtecCeLite50Config
     if not config:
-        config = PiConfig(**driver.default_config)
-    return PiDevice(declaration=driver, transports=transports, protocols=protocols,
+        config = GraphtecCeLite50Config(**driver.default_config)
+    return GraphtecCeLite50Device(declaration=driver, transports=transports, protocols=protocols,
                     config=config)
 
 
