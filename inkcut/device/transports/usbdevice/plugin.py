@@ -17,11 +17,18 @@ from inkcut.core.api import Plugin, Model, log
 from inkcut.device.plugin import DeviceTransport
 from serial.tools.list_ports import comports
 
-from inkcut.device.transports.raw.plugin import RawFdProtocol
-
-
 import usb.core
 import usb.util
+
+
+class UsbDeviceDescriptor:
+    def __init__(self, vendor_id, product_id, serial):
+        self.__vendor_id = vendor_id
+        self.__product_id = product_id
+        self.__serial = serial
+
+    def __str__(self):
+        return "{} ({}:{})".format(self.__serial, self.__vendor_id, self.__product_id)
 
 
 class UsbDeviceEnumerator:
@@ -32,46 +39,40 @@ class UsbDeviceEnumerator:
             self._class = class_
 
         def __call__(self, device):
-            # first, let's check the device
             if device.bDeviceClass == self._class:
                 return True
-            # ok, transverse all devices to find an
-            # interface that matches our class
             for cfg in device:
-                # find_descriptor: what's it?
                 intf = usb.util.find_descriptor(cfg, bInterfaceClass=self._class)
                 if intf is not None:
                     return True
-
             return False
 
     def list():
+        log.info("Updating USB device list")
         result = []
-        # for dev in usb.core.find(idVendor=0x0b4d, idProduct=0x1133):
         for dev in usb.core.find(
             find_all=True,
             custom_match=UsbDeviceEnumerator.class_filter(UsbDeviceEnumerator.PRINTER_DEVICE_CLASS),
         ):
-            result.append(dev)
+            result.append(UsbDeviceDescriptor(dev.idVendor, dev.idProduct, dev.serial_number))
         return result
 
 
 class UsbDeviceConfig(Model):
-    #: Available usb devices
-    devices = []
-    device_names = List()
+    device_descriptors = List()
+    
+    selected_device = Instance(UsbDeviceDescriptor)
 
+    def _default_device_descriptors(self):
+        return UsbDeviceEnumerator.list()
+
+    def _default_selected_device(self):
+        if self.device_descriptors:
+            return self.device_descriptors[0]
+        return None
+        
     def refresh(self):
-        self.devices.clear()
-        device_names = []
-        for dev in UsbDeviceEnumerator.list():
-            device_name = "{}:{}".format(dev.idVendor, dev.idProduct)
-            log.info("Found device {}".format(device_name))
-            self.devices.append(dev)
-            device_names.append(device_name)
-        self.device_names = device_names
-        log.info(self.device_names)
-
+        self.device_descriptors = UsbDeviceEnumerator.list()
 
 class UsbDeviceTransport(DeviceTransport):
 
@@ -79,7 +80,23 @@ class UsbDeviceTransport(DeviceTransport):
     config = Instance(UsbDeviceConfig, ()).tag(config=True)
 
     def connect(self):
-        pass
+        """Connect using whatever implementation necessary"""
+        raise NotImplementedError
+
+    def write(self, data):
+        """Write using whatever implementation necessary"""
+        raise NotImplementedError
+
+    def read(self, size=None):
+        """Read using whatever implementation necessary and
+        invoke `protocol.data_received` with the output.
+
+        """
+        raise NotImplementedError
+
+    def disconnect(self):
+        """Disconnect using whatever implementation necessary"""
+        raise NotImplementedError
 
 
 class UsbDevicePlugin(Plugin):

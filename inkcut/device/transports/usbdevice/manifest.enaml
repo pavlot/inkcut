@@ -11,7 +11,7 @@ from inkcut.device.extensions import DeviceTransport, DEVICE_TRANSPORT_POINT
 
 def transport_factory(driver, declaration, protocol):
     from .plugin import UsbDeviceTransport, UsbDeviceConfig
-    config = UsbDeviceConfig(**driver.get_connection_config('serial'))
+    config = UsbDeviceConfig()
     return UsbDeviceTransport(declaration=declaration, protocol=protocol, config=config)
 
 

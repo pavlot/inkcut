@@ -12,6 +12,7 @@ PyQt5; python_version >= '3.0'
 qt-reactor
 pytest
 pytest-coverage
+pyusb
 # for pytest-qt:
 pytest-qt
 codecov

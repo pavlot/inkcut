@@ -12,6 +12,7 @@ Created on Jul 12, 2015
 @author: jrm
 """
 import textwrap
+from inkcut.core.api import log
 from inkcut.core.utils import load_icon
 from enaml.layout.api import hbox, align, spacer
 from enaml.qt.QtWidgets import QApplication
@@ -36,12 +37,13 @@ enamldef UsbDeviceSettingsView(Container):
                 align('v_center', cb, pb)
             ]
             ObjectCombo: cb:
-                items << model.device_names
-                #selected << selected_port(model.port, model.ports)
-#                selected ::
-#                   port = change['value']
-#                    if port:
-#                      model.port = port.device
+                items << model.device_descriptors
+                selected << model.selected_device
+                selected ::
+                    selected_device = change['value']
+                    log.info("Selected device {}".format(selected_device))
+                    if selected_device:
+                        model.selected_device = selected_device
                 tool_tip = textwrap.dedent("""
                 List of usb devices detected by the system. If nothing is here you
                 must install the device driver for your machine.

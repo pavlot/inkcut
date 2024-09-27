@@ -11,15 +11,30 @@ Created on Dec 8, 2017
 @author: jrm
 """
 from enaml.core.api import Looper
-from enaml.layout.api import hbox
+from inkcut.core.utils import load_icon
+from enaml.layout.api import hbox, align
+from enaml.styling import StyleSheet, Style, Setter
 from enaml.widgets.api import (
-    Container, Form, Label, ObjectCombo, SpinBox, CheckBox, Notebook, Page
+    Container, Form, Label, ObjectCombo, SpinBox, CheckBox, Notebook, Page, PushButton
 )
 from enamlx.widgets.api import DoubleSpinBox
 from .driver import PiConfig # TODO PTAR Remove it
 from .driver import ConditionConfig
 from enaml.qt.QtWidgets import QApplication
 
+enamldef ConfigSheet(StyleSheet):
+    Style:
+        element = 'Label'
+        style_class = 'label-warning'
+        Setter:
+            field = 'color'
+            value = 'yellow'
+    Style:
+        element = 'Label'
+        style_class = 'label-error'
+        Setter:
+            field = 'color'
+            value = 'red'
 
 
 enamldef ConditionForm(Form):
@@ -35,6 +50,23 @@ enamldef ConfigView(Container): view:
     """
     attr model: PiConfig
     padding = 0
+    ConfigSheet:
+        pass
+    Container:
+        padding = 0
+        constraints = [
+            hbox(lb_status_title, lb_status_value, pb),
+            align('v_center', lb_status_title, lb_status_value, pb)
+        ]
+        Label: lb_status_title:
+            text = QApplication.translate("parallelport", "Status")
+        Label: lb_status_value:
+            text = QApplication.translate("parallelport", "Not connected")
+            style_class = 'label-error'
+        PushButton: pb:
+            text = QApplication.translate("parallelport", "Refresh")
+            icon = load_icon("arrow_refresh")
+#            clicked :: model.refresh()    
     Notebook:
         tab_style = 'document'
         tab_position = 'left'
