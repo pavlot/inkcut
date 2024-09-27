@@ -11,9 +11,6 @@ Created on Jan 24, 2015
 @author: jjm
 """
 
-import time
-import pstats
-from cProfile import Profile
 from atom.api import Instance, Str, List, Int, Float, Tuple, Dict, Bool, observe
 from inkcut.core.api import Model
 from inkcut.core.utils import async_sleep, log
@@ -21,25 +18,6 @@ from inkcut.device.plugin import Device, DeviceConfig
 from twisted.internet.defer import inlineCallbacks, DeferredList
 from contextlib import contextmanager
 from enaml.qt import QtGui
-
-try:
-    import RPi.GPIO as GPIO
-
-    GPIO_AVAILABLE = True
-except ImportError:
-    GPIO_AVAILABLE = False
-
-try:
-    #: Moved here so I can still test it on the desktop
-    from . import registration
-
-    CM_AVAILABLE = True
-except ImportError:
-    registration = None
-    CM_AVAILABLE = False
-
-PROFILER = Profile()
-
 
 class GraphtecCeLite50Config(DeviceConfig):
     pass
